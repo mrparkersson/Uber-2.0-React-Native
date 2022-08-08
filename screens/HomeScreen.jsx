@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, SafeAreaView, Image } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
+import NavOptions from '../components/NavOptions';
 //you can write your tailwind styles with the normal styling
 
 const HomeScreen = () => {
@@ -14,6 +15,7 @@ const HomeScreen = () => {
             uri: 'https://links.papareact.com/gzs',
           }}
         />
+        <NavOptions />
       </View>
     </SafeAreaView>
   );
