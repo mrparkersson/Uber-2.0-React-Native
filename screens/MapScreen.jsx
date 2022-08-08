@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import React from 'react';
 
 const MapScreen = () => {
   return (
-    <View>
-      <Text>MapScreen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>MapScreen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
