@@ -8,8 +8,6 @@ import { GOOGLE_MAPS_APIKEY } from '@env';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDestination, setOrigin } from '../slices/navSlice';
 
-// const MAP_API_KEY = 'AIzaSyAelDLXpQMTcQuY-OM3BZ60jt4JHFirXO4';
-
 const HomeScreen = () => {
   const dispatch = useDispatch();
   // const { origin, destination } = useSelector((state) => state.nav);
