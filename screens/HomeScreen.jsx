@@ -5,12 +5,12 @@ import NavOptions from '../components/NavOptions';
 //you can write your tailwind styles with the normal styling
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from '@env';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from '../slices/navSlice';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
-  // const { origin, destination } = useSelector((state) => state.nav);
+
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`p-5`}>
@@ -22,7 +22,7 @@ const HomeScreen = () => {
           }}
         />
         <GooglePlacesAutocomplete
-          placeholder="Where to?"
+          placeholder="Where from?"
           query={{
             key: GOOGLE_MAPS_APIKEY,
             language: 'en',
