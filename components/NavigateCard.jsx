@@ -1,4 +1,10 @@
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from '@env';
@@ -6,6 +12,8 @@ import tw from 'tailwind-react-native-classnames';
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
+import NavFavourite from './NavFavourite';
+import { Icon } from 'react-native-elements';
 
 const NavigateCard = () => {
   const disptach = useDispatch();
@@ -40,6 +48,15 @@ const NavigateCard = () => {
             }}
           />
         </View>
+        <NavFavourite />
+      </View>
+      <View style={tw`p-4 `}>
+        <TouchableOpacity
+          style={tw`flex flex-row bg-black w-24 px-4 py-3 rounded-full `}
+        >
+          <Icon name="car" type="font-awesome" color="white" size={16} />
+          <Text style={tw`text-white text-center`}>Rides</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
